@@ -7,7 +7,7 @@ public class Sample {
 		maze.createMap();
 
 		// 迷路探索
-		maze.searchMap(1, 1, 29, 13);
+		maze.bufferSearch(1, 1, 29, 13);
 
 		// 迷路表示(標準出力)
 		maze.printMap();
