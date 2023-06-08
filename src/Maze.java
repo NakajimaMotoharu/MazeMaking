@@ -286,7 +286,7 @@ public class Maze {
 		}
 	}
 
-	// // (x1, y1)から(x2, y2)までの経路探索(バッファー)
+	// (x1, y1)から(x2, y2)までの経路探索(バッファー)
 	public void bufferSearch(int x1, int y1, int x2, int y2){
 		makeBuffer();
 		while(deleteBufferDeadEnd(x1, y1, x2, y2) != 0){}
