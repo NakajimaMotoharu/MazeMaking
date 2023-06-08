@@ -45,4 +45,5 @@ private int deleteBufferDeadEnd(int x1, int y1, int x2, int y2); // バッファ
 
 # UpdateLog
 20230606 アップロード
+
 20230608 探索アルゴリズムの追加・サンプルプログラムの修正
