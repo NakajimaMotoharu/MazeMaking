@@ -13,9 +13,17 @@ public void createMap(); // ランダムな迷路を作成します。
 
 public void fillMap(int x, int y); // 指定座標から移動可能な位置をマークします。基本的にはデバッグ用です。
 
-public void searchMap(int x, int y, int a, int b); // (x, y)から(a, b)までの経路探索
+public int recursiveSearchMap(int x, int y, int a, int b, int come); // (x, y)から(a, b)までの経路探索(再起) 呼び出し時はcomeは-1を指定
+
+public void randomSearchMap(int x1, int y1, int x2, int y2); // (x1, y1)から(x2, y2)までの経路探索(乱数)
 
 public void printMap(); // マップを標準出力します。通路は' '、壁は'#'、ルートは'O'で表現します。
+
+public void bufferSearch(int x1, int y1, int x2, int y2); // (x1, y1)から(x2, y2)までの経路探索(バッファー)
+
+public void printBuffer(); // バッファー表示(標準出力)
+
+public void resetRoot(); // マップから経路情報を削除
 
 private boolean checkAllMine(); // すべての通路が開通しているかどうかの確認
 
@@ -27,5 +35,14 @@ private int getMap(int x, int y); // 指定座標のマップ情報を取得
 
 private void setMap(int x, int y, int p); // 指定座標のマップデータを置き換え
 
+private int getBuffer(int x, int y); // 指定座標のバッファー情報を取得
+
+private void setBuffer(int x, int y, int p); // 指定座標のバッファーデータを置き換え
+
+private void makeBuffer(); // バッファーを作成
+
+private int deleteBufferDeadEnd(int x1, int y1, int x2, int y2); // バッファーの行き止まりを削除
+
 # UpdateLog
 20230606 アップロード
+20230608 探索アルゴリズムの追加・サンプルプログラムの修正
